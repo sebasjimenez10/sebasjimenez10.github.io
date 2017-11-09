@@ -31,3 +31,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 destination: ./docs
+
+disqus:
+  shortname: sebastians-blog
