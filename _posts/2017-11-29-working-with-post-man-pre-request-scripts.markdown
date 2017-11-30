@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+ads: true
 title:  "Working with Postman Pre-request Scripts"
 date:   2017-11-27 12:10:00 -0500
 categories: javascript api postman
