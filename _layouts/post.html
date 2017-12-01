@@ -10,6 +10,9 @@ layout: default
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {{ page.date | date: date_format }}
       </time>
+      <span class="aligned-right">
+        {% include share_page.html %}
+      </span>
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
@@ -17,6 +20,10 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+  </div>
+
+  <div class="aligned-center">
+    {% include share_page.html %}
   </div>
 
   {% include google_ads.html %}

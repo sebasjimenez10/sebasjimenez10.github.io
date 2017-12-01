@@ -1,0 +1,17 @@
+.share-page {
+    background: $background-color;
+    color: $grey-color;
+    border-radius: 5px;
+    margin: 0.2 * $spacing-unit 0;
+    font-weight: 300;
+
+    a {
+        font-weight: 300;
+        color: $grey-color;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px dashed #fff;
+        }
+    }
+}
