@@ -181,6 +181,8 @@
 
 <p>This may lead you to think the <code class="highlighter-rouge">response.headers</code> is an array, but the truth is the <code class="highlighter-rouge">response.headers</code> object isn’t an array, it is an instance of the class <a href="http://www.postmanlabs.com/postman-collection/HeaderList.html"><code class="highlighter-rouge">HeaderList</code></a>, which is implemented in the <a href="http://www.postmanlabs.com/postman-collection/index.html">Postman SDK</a>.</p>
 
+<p>I figured this out by typing the following piece of code in the console: <code class="highlighter-rouge">response.headers.constructor.name</code>, which returned <code class="highlighter-rouge">'HeaderList'</code>.</p>
+
 <p>This class offers many methods including <code class="highlighter-rouge">get(key)</code> which is the one I used in the script to get the actual values of the headers, one header at a time. Before realizing this method existed, I spent quite some time trying to access the headers content like if it was an actual array. This sounds a bit silly and it could get very annoying if you don’t realize what’s going on. It’s a bit obvious but it is always a good idea to check the docs of the tool you’re using, especially if the tool offers programmatic features.</p>
 
 <h2 id="final-thoughts">Final Thoughts</h2>

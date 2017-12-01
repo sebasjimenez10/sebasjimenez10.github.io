@@ -89,6 +89,8 @@ Array:[]
 
 This may lead you to think the `response.headers` is an array, but the truth is the `response.headers` object isn't an array, it is an instance of the class [`HeaderList`](http://www.postmanlabs.com/postman-collection/HeaderList.html), which is implemented in the [Postman SDK](http://www.postmanlabs.com/postman-collection/index.html).
 
+I figured this out by typing the following piece of code in the console: `response.headers.constructor.name`, which returned `'HeaderList'`.
+
 This class offers many methods including `get(key)` which is the one I used in the script to get the actual values of the headers, one header at a time. Before realizing this method existed, I spent quite some time trying to access the headers content like if it was an actual array. This sounds a bit silly and it could get very annoying if you don't realize what's going on. It's a bit obvious but it is always a good idea to check the docs of the tool you're using, especially if the tool offers programmatic features.
 
 
