@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include head.html %}
+  <body>
+    <div class="absolute top-0 left-0 z-0 mx-auto min-w-full h-screen bg-fixed bg-cover opacity-50" style="background-image: url('assets/images/bg-image-front.png')"></div>
+    <div class="absolute top-0 left-0 z-10 mx-auto min-w-full h-screen">
+      <div class="flex justify-center mx-auto max-w-4xl h-screen items-center antialiased">
+        <div class="animated fadeIn">
+          <div class="xl:text-6xl text-4xl tracking-tight text-white leading-none">Sebastian Jimenez</div>
+          <div class="xl:text-5xl text-3xl tracking-tight text-gray-300 leading-none pb-6">Software Engineer</div>
+          <div>
+            <a href="{% link resume.md %}" class="
+              py-1 px-4
+              text-sm
+              text-white
+              xl:mr-3 xl:py-2 xl:text-base
+              bg-transparent
+              border border-white
+              hover:bg-blue-500
+              hover:text-white
+              rounded-full
+              ">Resume</a>
+            <a href="{% link blog.md %}" class="
+              ml-2 py-1 px-4
+              text-sm
+              text-white
+              xl:mr-3 xl:py-2 xl:text-base
+              bg-transparent
+              border border-white
+              hover:bg-blue-500
+              hover:text-white
+              rounded-full
+              ">Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
