@@ -3718,11 +3718,11 @@ video {
 }
 
 .font-display {
-  font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .font-body {
-  font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .font-hairline {
@@ -14039,13 +14039,11 @@ video {
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #629ED5;
-  height: 100%;
 }
 
 @media (min-width: 640px) {
@@ -17144,11 +17142,11 @@ body {
   }
 
   .sm\:font-display {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .sm\:font-body {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -30560,11 +30558,11 @@ body {
   }
 
   .md\:font-display {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .md\:font-body {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .md\:font-hairline {
@@ -43976,11 +43974,11 @@ body {
   }
 
   .lg\:font-display {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .lg\:font-body {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .lg\:font-hairline {
@@ -57392,11 +57390,11 @@ body {
   }
 
   .xl\:font-display {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .xl\:font-body {
-    font-family: Roboto-Thin, Roboto-Regular, Roboto-Light, Roboto-Bold, sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   .xl\:font-hairline {

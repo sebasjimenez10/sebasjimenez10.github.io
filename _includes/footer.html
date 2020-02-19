@@ -1,46 +1,23 @@
-<footer class="p-4 bg-red-500">
-
-  <div>
-
-    <h2 >{{ site.title | escape }}</h2>
+<footer class="p-4 bg-blue-900 text-gray-300 shadow">
+  <div class="flex flex-row justify-between">
+    <div>
+      <p class="text-md">{{ site.title | escape }}</p>
+      <p class="text-thin text-sm">{{ site.description | escape }}</p>
+    </div>
 
     <div>
       <div>
-        <ul>
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div>
-        <ul>
+        <div class="flex flex-row">
           {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
+            <div class="flex flex-row">{% include icon-github.html username=site.github_username %}</div>
           {% endif %}
-
+        </div>
+        <div class="flex flex-row">
           {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
+            <div class="flex flex-row">{% include icon-twitter.html username=site.twitter_username %}</div>
           {% endif %}
-        </ul>
-      </div>
-
-      <div>
-        <p>{{ site.description | escape }}</p>
+        </div>
       </div>
     </div>
-
   </div>
-
 </footer>
