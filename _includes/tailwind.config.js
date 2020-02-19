@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['Roboto-Thin', 'sans-serif'],
-      body: ['Roboto-Thin', 'sans-serif']
+      display: ['Roboto-Thin', 'Roboto-Regular', 'Roboto-Light', 'Roboto-Bold', 'sans-serif'],
+      body: ['Roboto-Thin', 'Roboto-Regular', 'Roboto-Light', 'Roboto-Bold', 'sans-serif']
     },
     screens: {
       'sm': '640px',
@@ -10,7 +10,11 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        sblue: '#629ED5',
+      }
+    },
   },
   variants: {},
   plugins: [],

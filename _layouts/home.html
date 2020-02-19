@@ -2,25 +2,20 @@
 layout: default
 ---
 
-<div class="home">
+<div class="flex flex-col justify-center items-center text-white">
+  <div class="max-w-6xl">
+    <div class="text-3xl">Posts</div>
+    {{ content }}
+    <div class="min-w-full pt-4">
+      {% for post in site.posts %}
+        <div class="w-full text-sblue my-2 rounded-md bg-white shadow-md p-3">
+          <span class="font-thin">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <h1 class="page-heading">Posts</h1>
+          <div><a class="text-xl underline" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></div>
+        </div>
+      {% endfor %}
+    </div>
 
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+    <p class="font-light">subscribe <a class="underline" href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  </div>
 </div>
