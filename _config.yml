@@ -13,7 +13,7 @@ twitter_username: sebasjimenezvel
 github_username:  sebasjimenez10
 
 # Build settings
-baseurl: 'https://sebastianjimenez.co'
+baseurl: '/'
 destination: ./docs
 markdown: kramdown
 kramdown:
