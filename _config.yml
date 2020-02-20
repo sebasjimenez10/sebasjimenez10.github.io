@@ -6,14 +6,14 @@
 title: Sebastian Jimenez | Software Engineer
 email: sebasjimenezv@gmail.com
 description: Made with ♥
-url: "http://www.sebastianjimenez.co/"
+url: http://www.sebastianjimenez.co/
 
 # Social media settings
 twitter_username: sebasjimenezvel
 github_username:  sebasjimenez10
 
 # Build settings
-baseurl: ''
+baseurl: ""
 destination: ./docs
 markdown: kramdown
 kramdown:
