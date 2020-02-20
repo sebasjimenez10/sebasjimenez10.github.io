@@ -43,5 +43,3 @@ exclude:
   - postcss.config.js
   - purgecss.config.js
   - .gitignore
-
-theme: jekyll-theme-minimal
