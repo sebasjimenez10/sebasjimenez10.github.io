@@ -7,19 +7,17 @@ layout: default
       <div class="text-sblue px-3 md:p-5">
         <div class="text-4xl">{{ page.title | escape }}</div>
         <div class="pb-4">
-          <div class="text-thin" datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: "%b %-d, %Y" }}
-          </div>
+          {% if page.author %}
+          <div class="font-normal"><span>{{ page.author }}</span></div>
+          {% endif %}
+          <div class="font-light" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</div>
           <span>
             {% include share_page.html %}
           </span>
-          {% if page.author %}
-            <div class="font-thin"><span>{{ page.author }}</span></div>
-          {% endif %}
         </div>
       </div>
 
-      <div class="font-regular text-sblue text-justify markdown-body px-3 md:px-5">
+      <div class="font-normal text-sblue text-justify markdown-body px-3 md:px-5">
         {{ content }}
       </div>
 

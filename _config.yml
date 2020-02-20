@@ -13,7 +13,7 @@ twitter_username: sebasjimenezvel
 github_username:  sebasjimenez10
 
 # Build settings
-baseurl: ""
+baseurl: /docs
 destination: ./docs
 markdown: kramdown
 kramdown:
@@ -40,6 +40,6 @@ exclude:
   - yarn.lock
   - package-lock.json
   - README.md
-  - postcss.config.js
-  - purgecss.config.js
   - .gitignore
+  - purgecss.config.js
+  - postcss.config.js

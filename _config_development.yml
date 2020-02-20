@@ -1,0 +1,45 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Sebastian Jimenez | Software Engineer
+email: sebasjimenezv@gmail.com
+description: Made with ♥
+url: http://www.sebastianjimenez.co
+
+# Social media settings
+twitter_username: sebasjimenezvel
+github_username:  sebasjimenez10
+
+# Build settings
+baseurl: ""
+destination: ./docs
+markdown: kramdown
+kramdown:
+  input: GFM
+
+highlighter: rouge
+
+disqus:
+  shortname: sebastians-blog
+
+google_analytics: UA-82393433-2
+google_ads: ca-pub-5798084939276023
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-purgecss
+  - jekyll-postcss
+
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - yarn.lock
+  - package-lock.json
+  - README.md
+  - .gitignore
+  - purgecss.config.js
+  - postcss.config.js
