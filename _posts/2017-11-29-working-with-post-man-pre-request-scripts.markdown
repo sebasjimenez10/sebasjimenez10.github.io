@@ -5,6 +5,7 @@ ads: true
 title:  "Working with Postman Pre-request Scripts"
 date:   2017-11-27 12:10:00 -0500
 categories: javascript api postman
+author: Sebastian Jimenez
 ---
 
 For the past few weeks I've been working on the second version of the core API we have at [Wellthie](http://www.wellthie.com). To make sure we've been covering what's needed, we often check the progress with the product team, who is in charge of defining product features. This is a back and forth process, where it would be great if the product team plays around with the new APIs and sees the data the server puts together, which would increase the feedback quality enabling us to deliver faster improvements.
@@ -41,27 +42,28 @@ I spent quite some time trying to figure out a way to make this work. I tried to
 
 That was it, I found the solution to the problem I had. Now, to the script:
 
-```javascript
+
+{% highlight javascript %}
 pm.sendRequest({
-    url: "<host>/api/sign_in",
-    method: 'POST',
-    header: 'Content-Type:application/json',
-    body: {
-        mode: 'raw',
-        raw: JSON.stringify({
-            "email": pm.environment.get("user_email"),
-            "password": pm.environment.get("user_password")
-          })
-        }
+  url: "<host>/api/sign_in",
+  method: 'POST',
+  header: 'Content-Type:application/json',
+  body: {
+    mode: 'raw',
+    raw: JSON.stringify({
+      "email": pm.environment.get("user_email"),
+      "password": pm.environment.get("user_password")
+    })
+  }
 }, function (err, response) {
-    if (response) {
-      pm.environment.set("access_token_header", response.headers.get('access-token'));
-      pm.environment.set("client_header", response.headers.get('client'));
-      pm.environment.set("expiry_header", response.headers.get('expiry'));
-      pm.environment.set("uid_header", response.headers.get('uid'));
-    }
+  if (response) {
+    pm.environment.set("access_token_header", response.headers.get('access-token'));
+    pm.environment.set("client_header", response.headers.get('client'));
+    pm.environment.set("expiry_header", response.headers.get('expiry'));
+    pm.environment.set("uid_header", response.headers.get('uid'));
+  }
 });
-```
+{% endhighlight %}
 
 Postman exposes a variable called `pm` which implements a `sendRequest` function. It can take just a URL as an argument or an object, very similar to jQuery. It also exposed the environment variable through the `pm.environment` property. This way I could make the call to the *sign_in* API and then save the header values in the environment variables, which I make reference to in the actual API call sample. The script also takes the `email` and `password` values previously set, and uses them as parameters on the *sign_in* API call.
 
@@ -77,19 +79,19 @@ This way I was able to automate the sign in process before calling every *secure
 
 It would be weird if there weren't any gotchas, would it not? Well, I tripped on an issue which stalled me for a while.
 
-If you go ahead and print out the headers to the Postman console
-```javascript
+If you go ahead and print out the headers to the Postman console:
+{% highlight javascript %}
 console.log(response.headers);
-```
+{% endhighlight %}
 
 You may get something like this:
-```javascript
+{% highlight javascript %}
 Array:[]
-```
+{% endhighlight %}
 
 This may lead you to think the `response.headers` is an array, but the truth is the `response.headers` object isn't an array, it is an instance of the class [`HeaderList`](http://www.postmanlabs.com/postman-collection/HeaderList.html), which is implemented in the [Postman SDK](http://www.postmanlabs.com/postman-collection/index.html).
 
-I figured this out by typing the following piece of code in the console: `response.headers.constructor.name`, which returned `'HeaderList'`.
+I figured this out by typing the following piece of code in the console: `response.headers.constructor.name`, which returned `HeaderList`.
 
 This class offers many methods including `get(key)` which is the one I used in the script to get the actual values of the headers, one header at a time. Before realizing this method existed, I spent quite some time trying to access the headers content like if it was an actual array. This sounds a bit silly and it could get very annoying if you don't realize what's going on. It's a bit obvious but it is always a good idea to check the docs of the tool you're using, especially if the tool offers programmatic features.
 

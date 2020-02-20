@@ -1,34 +1,37 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="container mx-auto py-5">
+  <div>
+    <div class="bg-white rounded-md shadow-md">
+      <div class="text-sblue px-3 md:p-5">
+        <div class="text-4xl">{{ page.title | escape }}</div>
+        <div class="pb-4">
+          <div class="text-thin" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%b %-d, %Y" }}
+          </div>
+          <span>
+            {% include share_page.html %}
+          </span>
+          {% if page.author %}
+            <div class="font-thin"><span>{{ page.author }}</span></div>
+          {% endif %}
+        </div>
+      </div>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      <span class="aligned-right">
+      <div class="font-regular text-sblue text-justify markdown-body px-3 md:px-5">
+        {{ content }}
+      </div>
+
+      <div class="text-sblue pt-4 px-3 md:px-5 pb-5">
         {% include share_page.html %}
-      </span>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
-  </header>
+      </div>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
+      {% include google_ads.html %}
+
+      {% if site.disqus.shortname %}
+      {% include disqus_comments.html %}
+      {% endif %}
+    </div>
   </div>
-
-  <div class="aligned-center">
-    {% include share_page.html %}
-  </div>
-
-  {% include google_ads.html %}
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-</article>
+</div>

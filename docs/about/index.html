@@ -4,16 +4,18 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;">
 
   <title>About</title>
   <meta name="description" content="Made with ♥">
 
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap">
 
   <!-- Local -->
+  <link rel="stylesheet" href="/assets/markdown.css">
+  <link rel="stylesheet" href="/assets/highlight.css">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/about/">
   <link rel="alternate" type="application/rss+xml" title="Sebastian Jimenez | Software Engineer" href="/feed.xml">
@@ -56,9 +58,9 @@
   </script> -->
 </head>
 
-  <body class="h-screen">
+  <body class="h-screen antialiased">
     <div class="flex flex-col h-screen">
-      <main>
+      <div class="flex-shrink-0">
         <header class="site-header" role="banner">
 
   <div class="wrapper">
@@ -72,30 +74,7 @@
             <div class="hidden invisible xs:invisible sm:visible md:visible lg:visible xl:visible sm:block md:block lg:block xl:block"><a href="/">Sebastian Jimenez | Software Engineer</a></div>
             <div class="flex flex-col xs:flex-row sm:flex-row md:flex-row lg:flex-row xl:flex-row">
               <div class="mr-5"><a href="/">Home</a></div>
-              
-                
-                
-                  <div class="mr-5"><a href="">About</a></div>
-                
-              
-                
-                
-              
-                
-                
-              
-                
-                
-              
-                
-                
-              
-                
-                
-              
-                
-                
-              
+              <div class="mr-5"><a href="/blog.html">Posts</a></div>
               <div class="mr-5"><a href="/resume.html">Resume</a></div>
             </div>
           </div>
@@ -105,7 +84,7 @@
   </div>
 </header>
 
-        <div>
+        <div class="container px-2 sm:mx-auto max-w-4xl">
           <article class="post">
 
   <header class="post-header">
@@ -126,13 +105,13 @@ Sebastian J.</p>
 </article>
 
         </div>
-      </main>
+      </div>
       <footer class="mt-auto flex-shrink-0">
         <footer class="p-4 bg-blue-900 text-gray-300 shadow">
   <div class="flex flex-row justify-between">
     <div>
-      <p class="text-md">Sebastian Jimenez | Software Engineer</p>
-      <p class="text-thin text-sm">Made with ♥</p>
+      <div class="text-md">Sebastian Jimenez | Software Engineer</div>
+      <div class="text-thin text-sm">Made with ♥</div>
     </div>
 
     <div>

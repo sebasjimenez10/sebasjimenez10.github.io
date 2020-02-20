@@ -11,12 +11,7 @@
             <div class="hidden invisible xs:invisible sm:visible md:visible lg:visible xl:visible sm:block md:block lg:block xl:block"><a href="{% link index.md %}">Sebastian Jimenez | Software Engineer</a></div>
             <div class="flex flex-col xs:flex-row sm:flex-row md:flex-row lg:flex-row xl:flex-row">
               <div class="mr-5"><a href="{% link index.md %}">Home</a></div>
-              {% for path in page_paths %}
-                {% assign my_page = site.pages | where: "path", path | first %}
-                {% if my_page.title %}
-                  <div class="mr-5"><a href="{{ link my_page.url | relative_url }}">{{ my_page.title | escape }}</a></div>
-                {% endif %}
-              {% endfor %}
+              <div class="mr-5"><a href="{% link blog.md %}">Posts</a></div>
               <div class="mr-5"><a href="{% link resume.md %}">Resume</a></div>
             </div>
           </div>
