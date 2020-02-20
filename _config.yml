@@ -44,4 +44,4 @@ exclude:
   - purgecss.config.js
   - .gitignore
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
