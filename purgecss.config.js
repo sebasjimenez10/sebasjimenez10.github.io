@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./_site/**/*.html"],
   css: ["./_site/assets/main.css"],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+  // Tailwind CSS config
+  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 };
