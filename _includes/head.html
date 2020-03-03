@@ -7,8 +7,8 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ "favicon.ico" | relative_url }}" type="image/x-icon">
+  <link rel="icon" href="{{ "favicon.ico" | relative_url }}" type="image/x-icon">
 
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
