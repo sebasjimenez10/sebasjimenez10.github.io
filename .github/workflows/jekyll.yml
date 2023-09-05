@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with: '2.7.5'
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
