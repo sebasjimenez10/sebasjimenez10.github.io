@@ -3,48 +3,24 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoJsonApiClient from '@/images/logos/jsonapiclient.png'
+import logoPlanetaria from '@/images/logos/tower.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Tower',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      'Tower helps mobile developers stay on top of remote configuration across all devices.',
+    link: { href: 'https://tower.rocktlab.com', label: 'tower.rocktlab.com' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'json_api_client',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
-  },
+      'Open source contributions to the ruby JSONAPI Client repository',
+    link: { href: 'https://github.com/JsonApiClient/json_api_client', label: 'github.com/.../json_api_client' },
+    logo: logoJsonApiClient,
+  }
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -60,14 +36,14 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'What I\'ve built trying to make a difference.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="What I\'ve built trying to make a difference."
+      intro="Throughout the years, I've crafted various projects, and these are the ones I'm particularly proud of. I'm an open-source enthusiast, so if any spark your curiosity, feel free to dive into the code."
     >
       <ul
         role="list"
@@ -80,11 +56,12 @@ export default function Projects() {
                 src={project.logo}
                 alt=""
                 className="h-8 w-8"
+                style={{borderRadius: "24px"}}
                 unoptimized
               />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
+              <Card.Link href={project.link.href} target='_blank'>{project.name}</Card.Link>
             </h2>
             <Card.Description>{project.description}</Card.Description>
             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">

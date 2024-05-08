@@ -11,12 +11,12 @@ export async function GET(req: Request) {
 
   let author = {
     name: 'Sebastian Jimenez',
-    email: 'example@domain.com',
+    email: 'me@sebastianjimenez.com',
   }
 
   let feed = new Feed({
     title: author.name,
-    description: 'Your blog description',
+    description: 'Personal website and blog on software and more',
     author,
     id: siteUrl,
     link: siteUrl,
