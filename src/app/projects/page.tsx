@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoJsonApiClient from '@/images/logos/jsonapiclient.png'
-import logoPlanetaria from '@/images/logos/tower.png'
+import logoTower from '@/images/logos/tower.png'
 
 const projects = [
   {
@@ -12,7 +12,7 @@ const projects = [
     description:
       'Tower helps mobile developers stay on top of remote configuration across all devices.',
     link: { href: 'https://tower.rocktlab.com', label: 'tower.rocktlab.com' },
-    logo: logoPlanetaria,
+    logo: logoTower,
   },
   {
     name: 'json_api_client',
