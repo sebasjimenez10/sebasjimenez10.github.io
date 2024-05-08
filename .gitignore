@@ -1,4 +1,7 @@
-.sass-cache
-.jekyll-metadata
+# Ignore node modules
+/node_modules
+
+# Ignore next files
+.next
+
 .DS_Store
-node_modules
