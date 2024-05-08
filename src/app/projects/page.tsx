@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="What I\'ve built trying to make a difference."
+      title="What I've built trying to make a difference."
       intro="Throughout the years, I've crafted various projects, and these are the ones I'm particularly proud of. I'm an open-source enthusiast, so if any spark your curiosity, feel free to dive into the code."
     >
       <ul

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Sebastian Jimenez - Software engineer, creative thinker, drummer, and aspiring entrepreneur.',
   },
   description:
-    'I’m Sebastian, a software engineer based in Orange County, CA. I love to write software that fosters growth and unlocks opportunities.',
+    'I\'m Sebastian, a software engineer based in Orange County, CA. I love to write software that fosters growth and unlocks opportunities.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
