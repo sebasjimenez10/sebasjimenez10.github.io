@@ -284,8 +284,8 @@ export default async function Home() {
             Software engineer, aspiring entrepreneur, and drummer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Sebastian, a software engineer based in Orange County, CA.
-            I love to write software that fosters growth and brings ideas to life.
+            I'm Sebastian, a software engineer based in California.
+            I love to write software that fosters growth and bring ideas to life.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="https://twitter.com/sbstnjmnzv" aria-label="Follow on X" icon={XIcon} />
