@@ -3,3 +3,5 @@
 
 # Ignore next files
 .next
+
+.DS_Store
