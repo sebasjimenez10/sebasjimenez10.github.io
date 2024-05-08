@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
   },
 }
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default function RootLayout({
   children,
 }: {
@@ -34,6 +37,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      { isProduction && <GoogleAnalytics gaId="G-FLBETR66QD" />}
     </html>
   )
 }
