@@ -205,7 +205,7 @@ function Resume() {
       end: '2018',
     },
     {
-      company: 'ChimiChurri',
+      company: 'Chimi',
       title: 'Ruby on Rails Contractor',
       logo: logoChimi,
       start: '2016',
