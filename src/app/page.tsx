@@ -11,7 +11,7 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoCrossover from '@/images/logos/crossover.png'
+import logoWellthie from '@/images/logos/wellthie.png'
 import logoChimi from '@/images/logos/chimi.png'
 import logoEnvoy from '@/images/logos/envoy.png'
 import logoVault from '@/images/logos/vault.png'
@@ -192,35 +192,32 @@ function Resume() {
       title: 'Senior Software Engineer',
       logo: logoEnvoy,
       start: '2018',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: '2025',
     },
     {
-      company: 'Crossover',
-      title: 'Ruby on Rails Architect',
-      logo: logoCrossover,
+      company: 'Wellthie',
+      title: 'Software Engineer',
+      logo: logoWellthie,
       start: '2016',
       end: '2018',
     },
     {
       company: 'Chimi',
-      title: 'Ruby on Rails Contractor',
+      title: 'Software Engineer',
       logo: logoChimi,
       start: '2016',
       end: '2016',
     },
     {
       company: 'SLG (now Vault)',
-      title: 'Ruby on Rails Developer',
+      title: 'Software Engineer',
       logo: logoVault,
       start: '2015',
       end: '2016',
     },
     {
       company: 'Talos Digital',
-      title: 'Java Developer',
+      title: 'Software Engineer',
       logo: logoTalos,
       start: '2014',
       end: '2015',
