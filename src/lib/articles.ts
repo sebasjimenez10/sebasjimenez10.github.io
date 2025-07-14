@@ -5,6 +5,7 @@ interface Article {
   description: string
   author: string
   date: string
+  draft?: boolean // Support optional draft flag
 }
 
 export interface ArticleWithSlug extends Article {
@@ -32,5 +33,9 @@ export async function getAllArticles() {
 
   let articles = await Promise.all(articleFilenames.map(importArticle))
 
-  return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
+  // Filter out drafts
+  let publishedArticles = articles.filter((article) => !article.draft)
+
+  // Sort by date descending
+  return publishedArticles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }
