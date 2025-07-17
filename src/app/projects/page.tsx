@@ -11,7 +11,7 @@ const projects = [
     name: 'Tower',
     description:
       'Tower helps mobile developers stay on top of remote configuration across all devices.',
-    link: { href: 'https://tower.rocktlab.com', label: 'tower.rocktlab.com' },
+    link: { href: 'https://tower.infinitlab.co', label: 'tower.infinitlab.co' },
     logo: logoTower,
   },
   {
