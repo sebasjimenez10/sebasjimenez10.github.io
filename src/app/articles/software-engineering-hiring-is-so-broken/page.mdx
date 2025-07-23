@@ -1,0 +1,82 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import techInterviewPic from './tech-interview.png'
+import dreamingPic from './dreaming.png'
+import Link from 'next/link'
+
+export const article = {
+  author: 'Sebastian Jimenez',
+  date: '2025-07-23',
+  title: 'Software Engineering hiring is SO broken',
+  description: 'Interviewing in tech is broken in ways we often take for granted. There\'s a lot of talk about fairness, signal, and efficiency—but not enough about the **actual experience** for the candidate or how well we\'re truly assessing their potential to succeed in real-world conditions.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+# Rethinking the Software Engineering Interview
+### A closer look at what we're really trying to assess
+
+Interviewing in tech is broken in ways we often take for granted. There's a lot of talk about fairness, signal, and efficiency—but not enough about the **actual experience** for the candidate or how well we're truly assessing their potential to succeed in real-world conditions.
+
+It's easy to forget that interviews are not just a filter—they're also an opportunity. Not just for the company to vet talent, but for the candidate to show who they really are. Yet so many interview processes feel designed to make people fail, or at the very least, trip up.
+
+## What if interviews worked more like real life?
+
+In most jobs, people don't operate in a vacuum. They have access to documentation, they pair with teammates, they can ask for help, check their assumptions, or go off and research something before coming back with a better answer.
+
+Why don't we interview like that?
+
+An interview should be about creating enough space for the candidate to show what they know. Ask real questions. Nudge when needed. Redirect when they get stuck. If they're spinning, offer a different perspective. If there's a more efficient solution, hint at it. Not to spoon-feed them—but to give them the same kind of collaboration they'd get on the job.
+
+We're not evaluating search engines. We're evaluating engineers. And engineers *ask questions*. They explore. They guess wrong and adjust. They learn on the fly. That's what we should be testing.
+
+## It's not about going easy—it's about being real
+
+Of course, interviews need to be rigorous. People should prepare. You want a signal on how someone thinks, communicates, and solves problems.
+
+But that doesn't mean you trap them with gotcha questions. Or stand by while they get stuck, just to see how deep the hole gets. The goal shouldn't be to watch someone fail in silence—it should be to help them reveal what they're capable of.
+
+And let's be real: there's no perfect, universal way to assess aptitude in a 45-minute Zoom call. You can't always tell who's going to shine based on who nails a tree traversal under pressure. And if you don't help the candidate show their best work, you might miss out on someone who could've been great for the role.
+
+<Image src={techInterviewPic} alt="Tech interview" />
+
+## What if we flipped the model?
+
+Imagine an interview process built around iteration instead of judgment.
+
+- You start with a collaborative session where you tackle a problem together.  
+- The candidate can take that problem home, refine their approach, explore alternatives.  
+- In the next round, they come back and walk you through what they tried and why.  
+- Maybe a future teammate joins in and makes some changes—and you collaborate on integrating them.  
+- Every round builds on the last. It becomes a shared process, not just a filter.
+
+What you get is a much richer set of signals: problem-solving, adaptability, learning mindset, communication, technical choices, and even collaboration under real conditions.
+
+## People grow. Interviews should account for that.
+
+Think about how many times you've faced a problem at work and thought: *“There's no way to solve this.”*  
+And then... you figured it out. Maybe not right away. Maybe not alone. But you did.
+
+But in many interviews, **not figuring it out right there, on the spot, means you don't get the job**. It's as if we've forgotten that people learn. That growth is the job.
+
+## Dreaming is free
+
+I know. Most teams don't have time for a multi-stage collaborative process. We're busy. Budgets are tight. And there's always pressure to make fast, confident decisions.
+
+But if we're serious about building great teams—not just passing gate checks—we should design interview processes that actually reflect how people work.
+
+We should want to squeeze out as many meaningful data points as we can—not to trick people, but to give them a real shot at showing us what they're capable of. If we don't, we'll keep filtering out the quiet builders, the late bloomers, the non-traditional talents who just needed a slightly different on-ramp.
+
+<Image src={dreamingPic} alt="Dreaming of the ideal tech interview" />
+
+## Final Thoughts
+
+What would your ideal interview experience look like?
+
+Mine? It looks more like the job itself: collaborative, iterative, curious. A process that builds understanding rather than merely tests recall. One where you leave the room thinking not just *“Did they pass?”* but *“Could I see myself building something with this person?”*
+
+Because in the end, that's what matters most.
