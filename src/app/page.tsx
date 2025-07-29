@@ -16,6 +16,7 @@ import logoChimi from '@/images/logos/chimi.png'
 import logoEnvoy from '@/images/logos/envoy.png'
 import logoVault from '@/images/logos/vault.png'
 import logoTalos from '@/images/logos/talos.png'
+import logoShopify from '@/images/logos/shopify.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -187,6 +188,16 @@ function Role({ role }: { role: Role }) {
 
 function Resume() {
   let resume: Array<Role> = [
+    {
+      company: 'Shopify',
+      title: 'Senior Software Engineer',
+      logo: logoShopify,
+      start: '2025',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
     {
       company: 'Envoy',
       title: 'Senior Software Engineer',
